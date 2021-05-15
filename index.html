@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            Form
+        </title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <form autocomplete="on">
+            <p>Enter name: </p>
+            <input type="text" id="name" required title="Name">
+            <p>Enter email: </p>
+            <input type="email" id="emailid" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required
+            title="Email of type characters@characters.domain">
+            <p>Enter phone number: </p>
+            <input type="tel" id="teleno" pattern="[0-9]{10}" required title="Ten digit telephone no."> 
+            <p>Enter password: </p>
+            <input type="password" id="password1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required
+            title="Password must contain atleast a digit, lowercase and an uppercase letter">
+            <p>Confirm password: </p>
+            <input type="password" id="password2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required
+            title="Password must contain atleast a digit, lowercase and an uppercase letter">
+            <br>
+            <input type="checkbox" id="agreement" required>I agree to the terms and Conditions<br>
+
+            
+        </form>
+        <button onclick="ValidateUser()" >SUBMIT</button>
+       
+    </body>
+</html>
